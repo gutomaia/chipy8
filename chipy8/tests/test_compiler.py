@@ -11,3 +11,7 @@ class TestCompiler(TestCase):
     def test_compile_cls(self):
         opcodes = compile('CLS')
         self.assertEquals(opcodes, [0x00, 0xe0])
+
+    def test_compile_rts(self):
+        opcodes = compile('RTS')
+        self.assertEquals(opcodes, [0x00, 0xee])
