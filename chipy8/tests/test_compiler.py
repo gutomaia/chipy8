@@ -7,3 +7,7 @@ class TestCompiler(TestCase):
     def test_compile_rca(self):
         opcodes = compile('RCA')
         self.assertEquals(opcodes, [0x00, 0x30])
+
+    def test_compile_cls(self):
+        opcodes = compile('CLS')
+        self.assertEquals(opcodes, [0x00, 0xe0])
