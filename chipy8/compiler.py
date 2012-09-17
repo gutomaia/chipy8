@@ -7,4 +7,6 @@ def compile(source):
         return [0x00, 0xe0]
     elif source == 'RTS':
         return [0x00, 0xee]
-    return [0x12, 0x00] #JUMP $200
+    elif source == 'JUMP $200':
+        return [0x12, 0x00] #JUMP $200
+    return [0x12, 0x50]
