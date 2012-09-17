@@ -16,6 +16,10 @@ class TestCompiler(TestCase):
         opcodes = compile('RTS')
         self.assertEquals(opcodes, [0x00, 0xee])
 
+    def test_compile_jump_50(self):
+        opcodes = compile('JUMP $50')
+        self.assertEquals(opcodes, [0x10, 0x50])
+
     def test_compile_jump_200(self):
         opcodes = compile('JUMP $200')
         self.assertEquals(opcodes, [0x12, 0x00])

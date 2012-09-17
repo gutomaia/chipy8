@@ -13,5 +13,7 @@ def compile(source):
     elif token == 'JUMP':
         if tokens[1] == '$200':
             return [0x12, 0x00] #JUMP $200
+        elif tokens[1] == '$50':
+            return [0x10,0x50] #JUMP $50
         else:
-            return [0x12, 0x50]
+            return [0x12, 0x50] #JUMP $250
